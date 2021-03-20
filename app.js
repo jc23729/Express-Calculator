@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const ExpressError = require('./expressError');
 
+const { convertAndValidateNumsArray, findMode, findMean, findMedian } = require('./helpers');
+
 
 
 
