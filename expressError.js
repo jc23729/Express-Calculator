@@ -1,3 +1,5 @@
+
+// Let’s make our own error class!
 /** ExpressError extends the normal JS error so we can easily
  *  add a status when we make an instance of it.
  *
