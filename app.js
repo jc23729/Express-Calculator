@@ -36,18 +36,38 @@ app.get('/mode', function(request, response) {
 //   Make sure you have unit tests for mean, median and mode.
 
 
-// Global Error Handler
+// // Global Error Handler
 
-  app.use(function(err, req, res, next) {
-    // the default status is 500 Internal Server Error
-    let status = err.status || 500;
-    let message = err.message;
+//   app.use(function(err, req, res, next) {
+//     // the default status is 500 Internal Server Error
+//     let status = err.status || 500;
+//     let message = err.message;
   
-    // set the status and alert the user
-    return res.status(status).json({
-      error: {message, status}
+//     // set the status and alert the user
+//     return res.status(status).json({
+//       error: {message, status}
+//     });
+//   })
+
+/** general error handler */
+
+app.use(function (req, res, next) {
+    const err = new ExpressError("Not Found",404);
+  
+    // pass the error to the next piece of middleware
+    return next(err);
+  });
+  
+  /** general error handler */
+  
+  app.use(function (err, req, res, next) {
+    res.status(err.status || 500);
+  
+    return res.json({
+      error: err,
+      message: err.message
     });
-  })
+  });
 
 app.listen(3000, function(){
   console.log('App on port 3000');
