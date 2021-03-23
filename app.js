@@ -16,11 +16,13 @@ const ExpressError = require('./expressError');
 // }
 
 
-app.get('/mean', function(request, response) {
-    return response.send('mean route');
+app.get('/mean', function(req, res) {
+    console.log(req.params.nums);
+    res.send("Okay");
+    // return response.send('mean route');
   });
 
-app.get('/median', function(request, response) {
+app.get('/median', function(req, res) {
   return response.send('median route');
 });
 
