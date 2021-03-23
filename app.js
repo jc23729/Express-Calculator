@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const ExpressError = require('./expressError');
 
-const { convertAndValidateNumsArray, findMode, findMean, findMedian } = require('./helpers');
+// const { convertAndValidateNumsArray, findMode, findMean, findMedian } = require('./helpers');
 
 
 // The three base routes are /mean, /median, /mode. All accept GET requests
@@ -68,6 +68,9 @@ app.use(function (req, res, next) {
       message: err.message
     });
   });
+
+// use port 3000 unless there exists a preconfigured port
+var port = process.env.PORT || 3000;
 
 app.listen(3000, function(){
   console.log('App on port 3000');
