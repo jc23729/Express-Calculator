@@ -6,11 +6,10 @@ const {calcMean} = require('./operations');
 //stopped at 22 mins of second video
 
 app.get('/mean', function(req, res) {
+  //req.query.name  we convert the string into an array of integers, or strings
   let numsAsStrings = req.query.nums.split(',');
-
-  console.log(numsAsStrings);
-  console.log(typeof (req.query.nums));
-    res.send("Okay");
+  const mean = calcMean(numsAsStrings);
+    res.send(`result = ${mean}`);
     // return response.send('mean route');
   });
 

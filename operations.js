@@ -1,6 +1,9 @@
 const calcMean = (numbers) =>{
+  //if nums was passed but there was no number inside it. Example http://localhost:3000/mean?nums=
   if(nums.length === 0) return 0;
+  //let divider gets you the total number of elements in the array that we're going to divide by
   let divider = numbers.length;
+  //
   let nums = numbers.map(
     value => {
       return parseInt(value, 10);
