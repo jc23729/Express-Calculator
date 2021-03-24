@@ -20,15 +20,11 @@ const ExpressError = require('./expressError');
 //     console.log(req.query.nums);
 //     res.send("Okay");
 //     // return response.send('mean route');
-
-
-  });
+// });
 app.get('/mean', function(req, res) {
     console.log(req.query.nums);
     res.send("Okay");
     // return response.send('mean route');
-
-
   });
 
 app.get('/median', function(req, res) {
