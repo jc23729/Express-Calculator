@@ -3,6 +3,7 @@ const app = express();
 const {calcMean} = require('./operations');
 
 // const { convertAndValidateNumsArray, findMode, findMean, findMedian } = require('./helpers');
+//stopped at 22 mins of second video
 
 app.get('/mean', function(req, res) {
   let numsAsStrings = req.query.nums.split(',');
