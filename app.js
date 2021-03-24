@@ -15,7 +15,14 @@ const ExpressError = require('./expressError');
 //   value: 4
 // }
 
+//check to see if route is working 
+// app.get('/mean', function(req, res) {
+//     console.log(req.query.nums);
+//     res.send("Okay");
+//     // return response.send('mean route');
 
+
+  });
 app.get('/mean', function(req, res) {
     console.log(req.query.nums);
     res.send("Okay");
