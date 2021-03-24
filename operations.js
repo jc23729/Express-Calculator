@@ -3,7 +3,7 @@ const calcMean = (numbers) =>{
   if(nums.length === 0) return 0;
   //let divider gets you the total number of elements in the array that we're going to divide by
   let divider = numbers.length;
-  //
+  //numbers map converts a string into an integer
   let nums = numbers.map(
     value => {
       return parseInt(value, 10);
@@ -11,7 +11,12 @@ const calcMean = (numbers) =>{
   )
 
 }
-  
+// From the classic forloop to the forEach() method,
+//  various techniques and methods are used to iterate through datasets 
+//  in JavaScript. One of the most popular methods is the .map() method. .map()
+//   creates an array from calling a specific function on each item in the parent array. .map() 
+//   is a non-mutating method that creates a new array as opposed to mutating methods, which only make changes
+//    to the calling array.
 
 module.exports = {calcMean}
 
