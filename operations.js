@@ -1,8 +1,16 @@
+const calcMean = (numbers) =>{
+  if(nums.length === 0) return 0;
+  let divider = numbers.length;
+  let nums = numbers.map(
+    value => {
+      return parseInt(value, 10);
+    }
+  )
 
+}
+  
 
-
-
-
+module.exports = {calcMean}
 
 
 
