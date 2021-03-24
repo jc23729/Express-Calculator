@@ -17,9 +17,11 @@ const ExpressError = require('./expressError');
 
 
 app.get('/mean', function(req, res) {
-    console.log(req.params.nums);
+    console.log(req.query.nums);
     res.send("Okay");
     // return response.send('mean route');
+
+
   });
 
 app.get('/median', function(req, res) {
@@ -53,23 +55,23 @@ app.get('/mode', function(request, response) {
 
 /** general error handler */
 
-app.use(function (req, res, next) {
-    const err = new ExpressError("Not Found",404);
+// app.use(function (req, res, next) {
+//     const err = new ExpressError("Not Found",404);
   
-    // pass the error to the next piece of middleware
-    return next(err);
-  });
+//     // pass the error to the next piece of middleware
+//     return next(err);
+//   });
   
-  /** general error handler */
+//   /** general error handler */
   
-  app.use(function (err, req, res, next) {
-    res.status(err.status || 500);
+//   app.use(function (err, req, res, next) {
+//     res.status(err.status || 500);
   
-    return res.json({
-      error: err,
-      message: err.message
-    });
-  });
+//     return res.json({
+//       error: err,
+//       message: err.message
+//     });
+//   });
 
 // use port 3000 unless there exists a preconfigured port
 var port = process.env.PORT || 3000;
