@@ -29,6 +29,8 @@ app.get('/mode', function(request, response) {
 // use port 3000 unless there exists a preconfigured port
 var port = process.env.PORT || 3000;
 
+//Testing to see if everything is working correctly
+
 app.listen(3000, function(){
   console.log('App on port 3000');
 }) 
